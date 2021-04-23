@@ -6,7 +6,7 @@ GENERAL
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 body{
@@ -100,8 +100,37 @@ ASIDE
 
 /* NOTIFY SECTION */
 .content-left .notify{
+    display: flex;
+    align-items: center;
+    padding: 9px 15px;
     background-color: #a2dffe;
 }
+
+.content-left .notify .bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+    height: 49px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #a2dffe;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.content-left .notify .content-notify{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-left .notify .content-notify a{
+    margin-top: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4f6b79;
+}
+
 
 /* SEARCH SECTION */
 .content-left .search{
