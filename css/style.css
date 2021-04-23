@@ -55,6 +55,33 @@ UTILITIES
     width: 59px;
 }
 
+.flex-space-bet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+}
+
+.flex-vert-center{
+    display: flex;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.utilities i{
+    font-size: 21px;
+    color: #bababa;
+    margin-right: 19px;
+}
+
+.soft-font{
+    font-size: 14px;
+}
+
 /* ****************************
 APP
  *****************************/
@@ -66,54 +93,27 @@ APP
     background-color: #fff;
 }
 
-#app .content-left,
-#app .content-right{
-    display: flex;
-    flex-direction: column;
-}
-
 /* ****************************
 ASIDE 
  *****************************/
 #app .content-left{
-    display: flex;
-    flex-direction: column;
     width: 35%;
-    border-right: 1px solid #eae8e6;
+    border-right: 2px solid #e5ddd5;
 }
 
 /* PROFILE SECTION */
 .content-left .profile{
-    display: flex;
-    padding: 8px 10px;
-    justify-content: space-between;
-    align-items: center;
     background-color:#ededed;
-}
-
-.content-left .profile .user{
-    display: flex;
-    align-items: center;
-}
-
-.content-left .profile .utilities i{
-    font-size: 21px;
-    color: #bababa;
-    margin-right: 19px;
 }
 
 /* NOTIFY SECTION */
 .content-left .notify{
-    display: flex;
-    align-items: center;
     padding: 9px 15px;
     background-color: #a2dffe;
 }
 
 .content-left .notify .bell{
-    display: flex;
     justify-content: center;
-    align-items: center;
     width: 49px;
     height: 49px;
     background-color: #fff;
@@ -123,18 +123,11 @@ ASIDE
     cursor: pointer;
 }
 
-.content-left .notify .content-notify{
-    display: flex;
-    flex-direction: column;
-}
-
 .content-left .notify .content-notify a{
     margin-top: 3px;
     font-weight: 400;
-    font-size: 14px;
     color: #4f6b79;
 }
-
 
 /* SEARCH SECTION */
 .content-left .search{
@@ -144,8 +137,6 @@ ASIDE
 }
 
 .content-left .search div{
-    display: flex;
-    align-items: center;
     justify-content: center;
     height: 32px;
     width: 71px;
@@ -169,8 +160,7 @@ ASIDE
 /* CONTACT SECTION */
 .content-left .contacts .contact{
     padding: 8px 10px;
-    display: flex;
-    align-items: center;
+    cursor: pointer;
     transition: background-color .2s;
 }
 
@@ -191,6 +181,12 @@ MAIN
  *****************************/
 #app .content-right{
     width: 65%;
+}
+
+/* MAIN HEADER */
+.main-header .interlocutor .name-date span:last-child{
+    margin-top: 3px;
+    color: #777e82;
 }
 
 /* SECTION MAIN-HEADER */

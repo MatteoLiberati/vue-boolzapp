@@ -19,12 +19,12 @@
     <!-- APP / VUE -->
     <div id="app">
         <!-- ASIDE -->
-        <aside class="content-left">
+        <aside class="content-left flex-column">
 
             <!-- PROFILE SECTION -->
-            <section class="profile">
+            <section class="profile flex-space-bet">
                 <!-- USER -->
-                <div class="user">
+                <div class="user flex-vert-center">
                     <a href="#"><img class="avatar" src="./img/avatar_io.jpg" alt="My avatar"></a>
                     <span class="ml-12">Nome Utente</span>
                 </div>
@@ -37,37 +37,55 @@
             </section>
 
             <!-- NOTIFY SECTION -->
-            <section class="notify">
-                <div class="bell">
+            <section class="notify flex-vert-center">
+                <div class="bell flex-vert-center">
                     <i class="fas fa-bell-slash"></i>
                 </div>
-                <div class="content-notify ml-12">
+                <div class="content-notify flex-column ml-12">
                     <span>Ricevi notifiche di nuovi messaggi</span>
-                    <a href="#">Attiva notifiche desktop</a>
+                    <a href="#" class="soft-font">Attiva notifiche desktop</a>
                 </div>
             </section>
 
             <!-- SEARCH SECTION -->
             <section class="search">
-                <div><i class="fas fa-search"></i></div>
+                <div class="flex-vert-center"><i class="fas fa-search"></i></div>
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </section>
 
             <!-- CONTACT SECTION -->
             <section class="contacts f-grow">
                 <!-- TEMPLATE CONTATTO DA DUPLICARE -->
-                <div class="contact">
+                <div class="contact flex-vert-center">
                     <img class="avatar chat" src="./img/avatar_1.jpg" alt="avatar1">
                     <span>Michele</span>
                 </div>
             </section>
         </aside>
-        
+
         <!-- MAIN -->
-        <main class="content-right">
-            <section class="main-header bd h-section"></section>
-            <section class="main-chat bd f-grow"></section>
-            <section class="main-footer bd h-section"></section>
+        <main class="content-right flex-column">
+
+            <!-- MAIN-HEADER -->
+            <section class="main-header flex-space-bet">
+                <!-- INTERLOCUTOR -->
+                <div class="interlocutor flex-vert-center">
+                    <a href="#"><img class="avatar" src="./img/avatar_1.jpg" alt="My avatar"></a>
+                    <div class="name-date ml-12 flex-column">
+                        <span>Michele</span>
+                        <span class="soft-font">Ultimo accesso oggi alle 10.35</span>
+                    </div>
+                </div>
+                <div class="utilities">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="#"><i class="fas fa-paperclip"></i></a>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+            </section>
+
+            <!-- MAIN CHAT -->
+            <section class="main-chat f-grow"></section>
+            <section class="main-footer h-section"></section>
         </main>
     <!-- end app/ Vue -->
     </div>
