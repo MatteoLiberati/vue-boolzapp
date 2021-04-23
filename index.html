@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- APP / VUE -->
-    <div id="app">
+    <div id="app" class="flex">
         <!-- ASIDE -->
         <aside class="content-left flex-column">
 
@@ -48,7 +48,7 @@
             </section>
 
             <!-- SEARCH SECTION -->
-            <section class="search">
+            <section class="search flex">
                 <div class="flex-vert-center"><i class="fas fa-search"></i></div>
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </section>
@@ -84,7 +84,22 @@
             </section>
 
             <!-- MAIN CHAT -->
-            <section class="main-chat f-grow"></section>
+            <section class="main-chat f-grow">
+                <div class="container-chat">
+                    <div class="container-sent flex">
+                        <div class="message-sent flex-column">
+                            <span>Messagio inviato</span>
+                            <span class="date">10/01/2021 15:50:00</span>
+                        </div>
+                    </div>
+                    <div class="container-received flex">
+                        <div class="message-received flex-column">
+                            <span>Messagio ricevuto</span>
+                            <span class="date">10/01/2021 15:50:00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="main-footer h-section"></section>
         </main>
     <!-- end app/ Vue -->

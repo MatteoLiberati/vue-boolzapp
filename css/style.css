@@ -55,6 +55,10 @@ UTILITIES
     width: 59px;
 }
 
+.flex{
+    display: flex;
+}
+
 .flex-space-bet{
     display: flex;
     justify-content: space-between;
@@ -86,7 +90,6 @@ UTILITIES
 APP
  *****************************/
 #app{
-    display: flex;
     height: 95%;
     min-width: 800px;
     width: 75%;
@@ -132,7 +135,6 @@ ASIDE
 /* SEARCH SECTION */
 .content-left .search{
     padding: 8px;
-    display: flex;
     background-color: #f6f6f6;
 }
 
@@ -197,6 +199,35 @@ MAIN
 /* SECTION MAIN-CHAT */
 .content-right .main-chat{
     background-image: url("../img/mine.jpg");
+}
+
+.container-sent{
+    justify-content: flex-end;
+}
+
+.message-sent,
+.message-received{
+    padding: 15px 4px 5px 15px;
+    min-width: 312px;
+    min-height: 51px;
+    border-radius: 10px;
+    background-color: #ddfabf;
+}
+
+.message-received{
+    background-color: #fff;
+}
+
+.message-sent span:last-child,
+.message-received span:last-child{
+    font-size: 10px;
+    text-align: right;
+    color: #bababa;
+}
+
+.content-right .container-chat{
+    height: 100%;
+    padding: 50px 100px;
 }
 
 /* SECTION MAIN-FOOTER */
