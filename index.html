@@ -115,11 +115,11 @@
                     <div v-show="showEmoji" class="emoji flex">
                         <div v-for="element in emoji" 
                         class="space-emoji">
-                        <a href="#">{{element}}</a>
+                        <a @click="addEmoji(element)" href="#">{{element}}</a>
                     </div>
                     </div>
                 </div>
-                <input class="input f-grow"type="text" placeholder="Scrivi un messaggio">
+                <input v-model="newEmoji" class="input f-grow"type="text" placeholder="Scrivi un messaggio">
                 <div class="flex-tot-center">
                     <a href="#"><i class="fas fa-microphone"></i></a>
                 </div>
