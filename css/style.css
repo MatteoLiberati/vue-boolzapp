@@ -26,24 +26,12 @@ body{
 /* ****************************
 UTILITIES
  *****************************/
-.h-section{
-    height: 68px;
-    /* CANCELLARE A FINE PROGETTO
-    SE TUTTE LE ALTEZZE SONO DETTATE 
-    DAGLI ELEMENTI */
-}
-
 .ml-12{
     margin-left: 12px;
 }
 
 .f-grow{
     flex-grow: 1;
-}
-
-.bd{
-    border: 1px solid #000;
-    /* CANCELLARE A FINE PROGETTO */
 }
 
 .avatar{
@@ -66,6 +54,12 @@ UTILITIES
     padding: 8px 10px;
 }
 
+.flex-tot-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .flex-vert-center{
     display: flex;
     align-items: center;
@@ -84,6 +78,20 @@ UTILITIES
 
 .soft-font{
     font-size: 14px;
+}
+
+.input{
+    padding: 0 5px;
+    height: 32px;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+    color: #727070;
+}
+
+.input:focus{
+    box-shadow: 0 0 5px 1px #a2dffe;
 }
 
 /* ****************************
@@ -116,7 +124,6 @@ ASIDE
 }
 
 .content-left .notify .bell{
-    justify-content: center;
     width: 49px;
     height: 49px;
     background-color: #fff;
@@ -139,24 +146,11 @@ ASIDE
 }
 
 .content-left .search div{
-    justify-content: center;
     height: 32px;
     width: 71px;
     background-color: #fff;
     color: #bababa;
     cursor: pointer;
-}
-
-.content-left .search input{
-    padding: 0 5px;
-    height: 32px;
-    flex-grow: 1;
-    border: none;
-    outline: none;
-}
-
-.content-left .search input:focus{
-    box-shadow: 0 0 5px 1px #a2dffe;
 }
 
 /* CONTACT SECTION */
@@ -199,6 +193,7 @@ MAIN
 /* SECTION MAIN-CHAT */
 .content-right .main-chat{
     background-image: url("../img/mine.jpg");
+    overflow-y: auto;
 }
 
 .container-sent{
@@ -232,5 +227,21 @@ MAIN
 
 /* SECTION MAIN-FOOTER */
 .content-right .main-footer{
+    padding: 9px 0;
     background-color: #f4f0ed;
+}
+
+.content-right .main-footer div{
+    width: 97px;
+    font-size: 24px;
+}
+
+.content-right .main-footer div i{
+    color: #787f83;
+}
+
+.content-right .main-footer input{
+    height: 48px;
+    padding-left: 10px;
+    font-size: 0.95rem;
 }
