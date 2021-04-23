@@ -56,9 +56,13 @@
             <!-- CONTACT SECTION -->
             <section class="contacts f-grow">
                 <!-- TEMPLATE CONTATTO DA DUPLICARE -->
-                <div class="contact flex-vert-center">
-                    <img class="avatar chat" src="./img/avatar_1.jpg" alt="avatar1">
-                    <span>Michele</span>
+                <div 
+                v-for="element in yourPropNameHere" 
+                class="contact flex-vert-center">
+                    <img class="avatar chat" 
+                    :src="'./img/avatar'+element.avatar+'.jpg'" 
+                    :alt="'avatar di '+element.name">
+                    <span>{{element.name}}</span>
                 </div>
             </section>
         </aside>
