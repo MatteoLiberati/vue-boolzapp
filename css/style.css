@@ -1,6 +1,103 @@
+/* ****************************
+GENERAL
+ *****************************/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #128C7E 0%,
+        #128C7E 15%,
+        #dce0dc 15%,
+        #dce0dc 100%
+    );
+}
+
+/* ****************************
+UTILITIES
+ *****************************/
+.h-section{
+    height: 68px;
+    /* CONTROLLARNE UTILIZZO */
+}
+
+.f-grow{
+    flex-grow: 1;
+}
+
+.bd{
+    border: 1px solid #000;
+}
+
+/* ****************************
+APP
+ *****************************/
+#app{
+    display: flex;
+    height: 95%;
+    min-width: 800px;
+    width: 75%;
+    background-color: #fff;
+}
+
+#app .content-left,
+#app .content-right{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ****************************
+ASIDE 
+ *****************************/
+#app .content-left{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+/* PROFILE SECTION */
+.content-left .profile{
+    background-color:#ededed
+}
+
+/* NOTIFY SECTION */
+.content-left .notify{
+    background-color: #a2dffe;
+}
+
+/* SEARCH SECTION */
+.content-left .search{
+    height: 50px;
+    background-color: #fbfbfb;
+}
+
+/* ****************************
+MAIN 
+ *****************************/
+#app .content-right{
+    width: 65%;
+}
+
+/* SECTION MAIN-HEADER */
+.content-right .main-header{
+    background-color:#ededed
+}
+
+/* SECTION MAIN-CHAT */
+.content-right .main-chat{
+    background-image: url("../img/mine.jpg");
+}
+
+/* SECTION MAIN-FOOTER */
+.content-right .main-footer{
+    background-color: #f4f0ed;
 }
