@@ -99,8 +99,8 @@ APP
  *****************************/
 #app{
     height: 95%;
-    min-width: 800px;
-    width: 75%;
+    min-width: 900px;
+    width: 78%;
     background-color: #fff;
 }
 
@@ -119,7 +119,7 @@ ASIDE
 
 /* NOTIFY SECTION */
 .content-left .notify{
-    padding: 9px 15px;
+    padding: 12px 15px;
     background-color: #a2dffe;
 }
 
@@ -207,6 +207,10 @@ MAIN
     min-height: 51px;
     border-radius: 10px;
     background-color: #ddfabf;
+}
+
+.container-chat div:not(:last-child){
+    margin-bottom: 10px;
 }
 
 .message-received{
