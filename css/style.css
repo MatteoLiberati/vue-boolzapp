@@ -134,8 +134,32 @@ ASIDE
 
 /* SEARCH SECTION */
 .content-left .search{
-    height: 50px;
-    background-color: #fbfbfb;
+    padding: 8px;
+    display: flex;
+    background-color: #f6f6f6;
+}
+
+.content-left .search div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 71px;
+    background-color: #fff;
+    color: #bababa;
+    cursor: pointer;
+}
+
+.content-left .search input{
+    padding: 0 5px;
+    height: 32px;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+}
+
+.content-left .search input:focus{
+    box-shadow: 0 0 5px 1px #a2dffe;
 }
 
 /* ****************************
