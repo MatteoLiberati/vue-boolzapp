@@ -51,6 +51,10 @@ UTILITIES
     border-radius: 50%;
 }
 
+.avatar.chat{
+    width: 59px;
+}
+
 /* ****************************
 APP
  *****************************/
@@ -160,6 +164,26 @@ ASIDE
 
 .content-left .search input:focus{
     box-shadow: 0 0 5px 1px #a2dffe;
+}
+
+/* CONTACT SECTION */
+.content-left .contacts .contact{
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color .2s;
+}
+
+.content-left .contacts .contact:hover{
+    background-color: #f6f6f6;
+}
+#f6f6f6
+.content-left .contacts .contact:not(:last-child){
+    border-bottom: 2px solid #f6f6f6;
+}
+
+.content-left .contacts .contact span{
+    margin-left: 20px;
 }
 
 /* ****************************
