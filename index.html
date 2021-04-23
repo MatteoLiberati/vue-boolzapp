@@ -107,11 +107,25 @@
 
             <!-- MAIN-FOOTER -->
             <section class="main-footer flex">
-                <div class="flex-tot-center"><a href="#"><i class="far fa-smile"></i></a></div>
+                <div class="flex-tot-center relative">
+                    <a href="#" @click="statusEmoji">
+                        <i class="far fa-smile"></i>
+                    </a>
+                    <!-- STAMPA EMOJI CON V-FOR -->
+                    <div v-show="showEmoji" class="emoji flex">
+                        <div v-for="element in emoji" 
+                        class="space-emoji">
+                        <a href="#">{{element}}</a>
+                    </div>
+                    </div>
+                </div>
                 <input class="input f-grow"type="text" placeholder="Scrivi un messaggio">
-                <div class="flex-tot-center"><a href="#"><i class="fas fa-microphone"></i></a></div>
+                <div class="flex-tot-center">
+                    <a href="#"><i class="fas fa-microphone"></i></a>
+                </div>
             </section>
         </main>
+
     <!-- end app/ Vue -->
     </div>
     <!-- JS -->

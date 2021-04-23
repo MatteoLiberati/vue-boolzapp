@@ -94,6 +94,10 @@ UTILITIES
     box-shadow: 0 0 5px 1px #a2dffe;
 }
 
+.relative{
+    position: relative;
+}
+
 /* ****************************
 APP
  *****************************/
@@ -242,6 +246,27 @@ MAIN
 
 .content-right .main-footer div i{
     color: #787f83;
+}
+
+.main-footer > div > .emoji{
+    width: 300px;
+    position: absolute;
+    padding: 20px;
+    bottom: 60px;
+    left: 0px;
+    height: 150px;
+    border-radius: 8px;
+    background-color: #f4f0ed;
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+.main-footer > div > .emoji .space-emoji{
+    width: calc(100% / 6);
+}
+
+.main-footer > div > .emoji a{
+    text-decoration: none;
 }
 
 .content-right .main-footer input{
