@@ -125,15 +125,31 @@ const app = new Vue({
             this.indexActive = index;
         },
 
+        /**
+         * invio di un input
+         */
         input(){
             this.list[this.indexActive].messages.push(
                 {
-                    date: dayjs().format("DD/MM/YYYY HH/mm/ss"),
+                    date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
                     message: this.newText,
                     status: 'sent'
                 },
             )
             this.newText = "";
+            this.autoReply();
+        },
+
+        autoReply(){
+            setTimeout(()=>{
+                this.list[this.indexActive].messages.push(
+                {
+                    date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                    message: "ok",
+                    status: 'received'
+                },
+            )
+            },1000)
         },
 
         /**
