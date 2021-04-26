@@ -82,9 +82,9 @@
             <section class="main-header flex-space-bet">
                 <!-- INTERLOCUTOR -->
                 <div class="interlocutor flex-vert-center">
-                    <a href="#"><img class="avatar" src="./img/avatar_1.jpg" alt="My avatar"></a>
+                    <a href="#"><img class="avatar" :src="'./img/avatar'+list[indexActive].avatar+'.jpg'" :alt="list[indexActive].name"></a>
                     <div class="name-date ml-12 flex-column">
-                        <span>Michele</span>
+                        <span>{{list[indexActive].name}}</span>
                         <span class="soft-font">Ultimo accesso oggi alle 10.35</span>
                     </div>
                 </div>
