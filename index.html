@@ -123,7 +123,11 @@
                     </div>
                     </div>
                 </div>
-                <input v-model="newEmoji" class="input f-grow"type="text" placeholder="Scrivi un messaggio">
+                <!-- INPUT -->
+                <input v-model="newText" 
+                class="input f-grow"type="text" 
+                @keyup.enter="input"
+                placeholder="Scrivi un messaggio">
                 <div class="flex-tot-center">
                     <a href="#"><i class="fas fa-microphone"></i></a>
                 </div>
@@ -132,6 +136,9 @@
 
     <!-- end app/ Vue -->
     </div>
+
+    <!-- DAY JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
     <!-- JS -->
     <script src="./js/script.js"></script>
 </body>

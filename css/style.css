@@ -98,10 +98,6 @@ UTILITIES
     position: relative;
 }
 
-.active-bk{
-    background-color: #bababa;
-}
-
 /* ****************************
 APP
  *****************************/
@@ -171,13 +167,17 @@ ASIDE
 .content-left .contacts .contact:hover{
     background-color: #f6f6f6;
 }
-#f6f6f6
+
 .content-left .contacts .contact:not(:last-child){
     border-bottom: 2px solid #f6f6f6;
 }
 
 .content-left .contacts .contact span{
     margin-left: 20px;
+}
+
+.content-left .contacts .contact.active-bk{
+    background-color: #bababa;
 }
 
 /* ****************************
