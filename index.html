@@ -50,7 +50,11 @@
             <!-- SEARCH SECTION -->
             <section class="search flex">
                 <div class="flex-tot-center"><i class="fas fa-search"></i></div>
-                <input class="input" type="text" placeholder="Cerca o inizia una nuova chat">
+                <input class="input"
+                v-model="search" 
+                type="text"
+                @keyup="filter"
+                placeholder="Cerca o inizia una nuova chat">
             </section>
 
             <!-- CONTACT SECTION -->
@@ -58,6 +62,7 @@
                 <!-- TEMPLATE CONTATTO DA DUPLICARE -->
                 <div
                 v-for="(element, index) in list" 
+                v-show="element.visible"
                 class="contact flex-vert-center"
                 :class="{'active-bk': element.active}"
                 @click="activeElement(element,index)"

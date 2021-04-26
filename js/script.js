@@ -91,6 +91,7 @@ const app = new Vue({
         showEmoji: false,
         newText : "",
         indexActive : 0,
+        search : "",
     },
     mounted(){ 
         this.reset();
@@ -150,6 +151,26 @@ const app = new Vue({
                 },
             )
             },1000)
+        },
+
+        arrayName(){
+            this.list.forEach(element =>{
+                element.name.toLowerCase().split("");
+            })
+        },
+
+        /**
+         * filtra per caratteri gli utenti
+         */
+        filter(){
+            console.log(this.search);
+            this.list.forEach((element,index)=>{
+                if(element.name.toLowerCase().includes(this.search)){
+                    this.list[index].visible = true;
+                } else{
+                    this.list[index].visible = false;
+                }
+            })
         },
 
         /**
