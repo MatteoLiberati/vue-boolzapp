@@ -2,7 +2,7 @@ const app = new Vue({
     el:"#app",
     data:{
         // Elenco contatti
-        yourPropNameHere: [
+        list: [
             {
                 name: 'Michele',
                 avatar: '_1',
@@ -92,15 +92,9 @@ const app = new Vue({
         newEmoji : " ",
     },
     mounted(){ 
+        this.reset();
     },
     created(){ 
-          this.yourPropNameHere = this.yourPropNameHere.map(element =>{
-            return{
-                ...element,
-                active:false,
-            }
-        })
-        return this.yourPropNameHere;
     },
     methods:{
 
@@ -125,11 +119,19 @@ const app = new Vue({
          * @param {index array} index 
          */
         activeElement(element,index){
-            this.yourPropNameHere[index].active = true;
-            console.log(element.active);
+            this.reset();
+            this.list[index].active = true;
             
         },
 
+        reset(){
+            this.list = this.list.map(item =>{
+                return {
+                    ...item,
+                    active:false,
+                }
+            }) 
+        }
     },
 // end app / Vue
 })

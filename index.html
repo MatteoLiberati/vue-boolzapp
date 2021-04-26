@@ -57,9 +57,9 @@
             <section class="contacts f-grow">
                 <!-- TEMPLATE CONTATTO DA DUPLICARE -->
                 <div
-                v-for="(element, index) in yourPropNameHere" 
-                
+                v-for="(element, index) in list" 
                 class="contact flex-vert-center"
+                :class="{'active-bk': element.active}"
                 @click="activeElement(element,index)"
                 :key="index + '-' + element.name">
                     <img class="avatar chat" 
@@ -92,10 +92,11 @@
 
             <!-- MAIN-CHAT -->
             <section class="main-chat f-grow">
-                <div class="container-chat">
+                <div 
+                class="container-chat">
                     <div class="container-sent flex">
                         <div class="message-sent flex-column">
-                            <span>Messagio inviato</span>
+                            <span>Messagio</span>
                             <span class="date">10/01/2021 15:50:00</span>
                         </div>
                     </div>
