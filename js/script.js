@@ -1,6 +1,11 @@
 const app = new Vue({
     el:"#app",
     data:{
+        // My account
+        myAccount : {
+            name: "It's me!",
+            avatar: '_io',
+        },
         // Elenco contatti
         list: [
             {
@@ -188,7 +193,6 @@ const app = new Vue({
          */
         statusEmoji(){
             this.showEmoji =! this.showEmoji;
-            console.log(this.showEmoji);
         },
 
         /**
@@ -222,6 +226,7 @@ const app = new Vue({
             )
             this.newText = "";
             this.autoReply();
+            this.showEmoji = false;
         },
 
         autoReply(){

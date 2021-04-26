@@ -25,8 +25,8 @@
             <section class="profile flex-space-bet">
                 <!-- USER -->
                 <div class="user flex-vert-center">
-                    <a href="#"><img class="avatar" src="./img/avatar_io.jpg" alt="My avatar"></a>
-                    <span class="ml-12">Nome Utente</span>
+                    <a href="#"><img class="avatar" :src="'./img/avatar'+ myAccount.avatar +'.jpg'" alt="My avatar"></a>
+                    <span class="ml-12">{{myAccount.name}}</span>
                 </div>
                 <!-- UTILITIES -->
                 <div class="utilities">
