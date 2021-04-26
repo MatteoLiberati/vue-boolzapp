@@ -57,11 +57,12 @@
             <section class="contacts f-grow">
                 <!-- TEMPLATE CONTATTO DA DUPLICARE -->
                 <div 
-                v-for="element in yourPropNameHere" 
-                class="contact flex-vert-center">
+                v-for="(element, index) in yourPropNameHere" 
+                class="contact flex-vert-center"
+                :key="index + '-' element.name">
                     <img class="avatar chat" 
                     :src="'./img/avatar'+element.avatar+'.jpg'" 
-                    :alt="'avatar di '+element.name">
+                    :alt="'avatar di '+ element.name">
                     <span>{{element.name}}</span>
                 </div>
             </section>
@@ -113,8 +114,9 @@
                     </a>
                     <!-- STAMPA EMOJI CON V-FOR -->
                     <div v-show="showEmoji" class="emoji flex">
-                        <div v-for="element in emoji" 
-                        class="space-emoji">
+                        <div v-for="(element,index) in emoji" 
+                        class="space-emoji"
+                        :key="index + 'indice emoji'">
                         <a @click="addEmoji(element)" href="#">{{element}}</a>
                     </div>
                     </div>
