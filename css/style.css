@@ -158,6 +158,10 @@ ASIDE
 }
 
 /* CONTACT SECTION */
+.content-left .contacts{
+    overflow-y: auto;
+}
+
 .content-left .contacts .contact{
     padding: 8px 10px;
     cursor: pointer;
