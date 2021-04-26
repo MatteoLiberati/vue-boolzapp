@@ -56,10 +56,12 @@
             <!-- CONTACT SECTION -->
             <section class="contacts f-grow">
                 <!-- TEMPLATE CONTATTO DA DUPLICARE -->
-                <div 
+                <div
                 v-for="(element, index) in yourPropNameHere" 
+                
                 class="contact flex-vert-center"
-                :key="index + '-' element.name">
+                @click="activeElement(element,index)"
+                :key="index + '-' + element.name">
                     <img class="avatar chat" 
                     :src="'./img/avatar'+element.avatar+'.jpg'" 
                     :alt="'avatar di '+ element.name">

@@ -91,16 +91,45 @@ const app = new Vue({
         showEmoji: false,
         newEmoji : " ",
     },
-    mounted(){},
-    created(){},
+    mounted(){ 
+    },
+    created(){ 
+          this.yourPropNameHere = this.yourPropNameHere.map(element =>{
+            return{
+                ...element,
+                active:false,
+            }
+        })
+        return this.yourPropNameHere;
+    },
     methods:{
+
+        /**
+         * Rende visibile la finestra emoji
+         */
         statusEmoji(){
             this.showEmoji =! this.showEmoji;
             console.log(this.showEmoji);
         },
+
+        /**
+         * Aggiunge emoji all'input
+         * @param {array element} element 
+         */
         addEmoji(element){
             this.newEmoji += element;
-        }
+        },
+
+        /**
+         * rende active:true l'elemento cliccato
+         * @param {index array} index 
+         */
+        activeElement(element,index){
+            this.yourPropNameHere[index].active = true;
+            console.log(element.active);
+            
+        },
+
     },
 // end app / Vue
 })

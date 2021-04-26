@@ -98,6 +98,10 @@ UTILITIES
     position: relative;
 }
 
+.active-bk{
+    background-color: #727070;
+}
+
 /* ****************************
 APP
  *****************************/
@@ -263,6 +267,7 @@ MAIN
 
 .main-footer > div > .emoji .space-emoji{
     width: calc(100% / 6);
+    text-align: center;
 }
 
 .main-footer > div > .emoji a{
