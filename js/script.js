@@ -194,6 +194,7 @@ const app = new Vue({
          */
         statusEmoji(){
             this.showEmoji =! this.showEmoji;
+            this.$refs.input.focus();
         },
 
         /**
@@ -202,6 +203,7 @@ const app = new Vue({
          */
         addEmoji(element){
             this.newText += element;
+            this.$refs.input.focus();
         },
 
         /**
@@ -237,7 +239,7 @@ const app = new Vue({
                 this.list[this.indexActive].messages.push(
                 {
                     date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
-                    message: this.randomResponses[this.randomNumber(0,this.randomResponses.length)],
+                    message: this.randomResponses[this.randomNumber(0,this.randomResponses.length - 1)],
                     status: 'received'
                 },
             )

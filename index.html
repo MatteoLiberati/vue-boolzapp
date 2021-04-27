@@ -132,7 +132,9 @@
                     </div>
                 </div>
                 <!-- INPUT -->
-                <input v-model.trim="newText" 
+                <input 
+                ref="input"
+                v-model.trim="newText" 
                 class="input f-grow"type="text" 
                 @keyup.enter="input"
                 placeholder="Scrivi un messaggio">
