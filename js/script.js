@@ -181,9 +181,11 @@ const app = new Vue({
         newText : "",
         indexActive : 0,
         search : "",
+        lastAccessArray : [],
     },
     mounted(){ 
         this.reset();
+        this.lastAccess();
     },
     created(){ 
     },
@@ -287,6 +289,20 @@ const app = new Vue({
         randomNumber(min, max){
         return Math.floor(Math.random()* max - min+1) + min;
         },
+
+        lastAccess(){
+            // ciclo su array principale
+            this.list.forEach((item,index) =>{
+                // ciclo su array messages
+                item.messages.forEach((element) =>{
+                    // filtro per received
+                    if(element.status == "received"){
+                        this.lastAccessArray[index] = element.date
+                    }
+                })
+            })
+        },
+               
     },
 // end app / Vue
 })

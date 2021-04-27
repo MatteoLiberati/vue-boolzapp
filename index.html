@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <title>Whatsapp Web</title>
 </head>
+
 <body>
     <!-- APP / VUE -->
     <div id="app" class="flex">
@@ -88,7 +89,9 @@
                     <a href="#"><img class="avatar" :src="'./img/avatar'+list[indexActive].avatar+'.jpg'" :alt="list[indexActive].name"></a>
                     <div class="name-date ml-12 flex-column">
                         <span>{{list[indexActive].name}}</span>
-                        <span class="soft-font">Ultimo accesso oggi alle 10.35</span>
+                        <span class="soft-font">
+                            Ultimo accesso {{lastAccessArray[indexActive]}}
+                        </span>
                     </div>
                 </div>
                 <div class="utilities">
