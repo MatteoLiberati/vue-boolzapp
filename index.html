@@ -41,13 +41,24 @@
             </section>
 
             <!-- NOTIFY SECTION -->
-            <section class="notify flex-vert-center">
-                <div class="bell flex-tot-center">
-                    <i class="fas fa-bell-slash"></i>
+            <section 
+            class="notify flex-vert-center"
+            :class="{'notify-active': notify}">
+                <div @click="notifyActive" class="bell flex-tot-center">
+                    <i 
+                        class="fas"
+                        :class="notify ? 'fa-bell bellActive' : 'fa-bell-slash'">
+                    </i>
                 </div>
                 <div class="content-notify flex-column ml-12">
                     <span>Ricevi notifiche di nuovi messaggi</span>
-                    <a href="#" class="soft-font">Attiva notifiche desktop</a>
+                    <a 
+                        @click="notifyActive"
+                        href="#" 
+                        :class="{active : notify}"
+                        class="soft-font">
+                        {{notifyText}}
+                    </a>
                 </div>
             </section>
 

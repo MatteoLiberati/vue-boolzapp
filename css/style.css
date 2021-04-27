@@ -132,6 +132,10 @@ ASIDE
     background-color: #a2dffe;
 }
 
+.content-left .notify-active{
+    background-color: #128C7E;
+}
+
 .content-left .notify .bell{
     width: 49px;
     height: 49px;
@@ -142,10 +146,18 @@ ASIDE
     cursor: pointer;
 }
 
+.content-left .notify .bellActive{
+    color: #128C7E ;
+}
+
 .content-left .notify .content-notify a{
     margin-top: 3px;
     font-weight: 400;
     color: #4f6b79;
+}
+
+.content-left .notify .content-notify a.active{
+    color: #fff;
 }
 
 /* SEARCH SECTION */
