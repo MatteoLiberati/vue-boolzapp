@@ -21,7 +21,7 @@
 
 <body>
     <!-- APP / VUE -->
-    <div id="app" class="flex">
+    <div id="app" class="flex relative">
         <!-- ASIDE -->
         <aside class="content-left flex-column">
 
@@ -159,6 +159,14 @@
             </section>
         </main>
 
+        <!-- ALERT NOTIFY -->
+        <div v-show="alert" class="alert-notify flex-tot-center flex-column">
+            <h2>{{alertText}}</h2>
+            <i 
+                class="fas"
+                :class="notify ? 'fa-bell bellActive' : 'fa-bell-slash'">
+            </i>
+        </div>
     <!-- end app/ Vue -->
     </div>
 

@@ -184,6 +184,8 @@ const app = new Vue({
         lastAccessArray : [],
         notify: false,
         notifyText: "Attiva notifiche desktop",
+        alert: false,
+        alertText: "Notifiche attivate",
     },
     mounted(){ 
         this.reset();
@@ -309,7 +311,11 @@ const app = new Vue({
         notifyActive(){
             this.notify =! this.notify;
             this.notifyText = this.notify ? "Notifiche attive, click per disabilitare" : "Attiva notifiche desktop"
-            console.log(this.notify);
+            this.alertText = this.notify ? "Notifiche attive" : "Notifiche disabilitate";
+            this.alert = true;
+            setTimeout(() =>{
+                this.alert = false;
+            },800)
         },
                
     },
