@@ -74,6 +74,11 @@ UTILITIES
     font-size: 21px;
     color: #bababa;
     margin-right: 19px;
+    transition: color .3s;
+}
+
+.utilities i:hover{
+    color: #232946;
 }
 
 .soft-font{
@@ -253,6 +258,11 @@ MAIN
 
 .content-right .main-footer div i{
     color: #787f83;
+    transition: color .3s;
+}
+
+.content-right .main-footer div i:hover{
+    color: #232946;
 }
 
 .main-footer > div > .emoji{
