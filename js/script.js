@@ -187,8 +187,6 @@ const app = new Vue({
         this.reset();
         this.lastAccess();
     },
-    created(){ 
-    },
     methods:{
 
         /**
@@ -232,6 +230,9 @@ const app = new Vue({
                 )
                 this.newText = "";
                 this.autoReply();
+                setTimeout(()=>{
+                    this.lastAccessArray[this.indexActive] = dayjs().format("DD/MM/YYYY HH:mm:ss")
+                },500);
                 this.showEmoji = false;
             }
         },
