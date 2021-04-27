@@ -186,6 +186,8 @@ const app = new Vue({
         notifyText: "Attiva notifiche desktop",
         alert: false,
         alertText: "Notifiche attivate",
+        confirmDelete: false,
+        indexDelete : null,
     },
     mounted(){ 
         this.reset();
@@ -294,7 +296,12 @@ const app = new Vue({
         randomNumber(min, max){
         return Math.floor(Math.random()* max - min+1) + min;
         },
-
+        
+        /**
+         * crea un array numerato in base al numero degli utenti 
+         * contenente solo la data dell'ultimo messaggio 
+         * ricevuto da loro
+         */
         lastAccess(){
             // ciclo su array principale
             this.list.forEach((item,index) =>{
@@ -308,6 +315,10 @@ const app = new Vue({
             })
         },
 
+        /**
+         * attiva l'allert temporizzato delle notifiche 
+         * e cambia la parte grafica notify
+         */
         notifyActive(){
             this.notify =! this.notify;
             this.notifyText = this.notify ? "Notifiche attive, click per disabilitare" : "Attiva notifiche desktop"
@@ -317,7 +328,33 @@ const app = new Vue({
                 this.alert = false;
             },800)
         },
-               
+
+        /**
+         * apre finestra di conferma eliminazione messaggio
+         * @param {number} index //indice del messaggio da cancellare
+         */
+        deleteMessage(index){
+            this.indexDelete = index;
+            console.log(this.indexDelete);
+            this.confirmDelete = true;
+            // this.list[this.indexActive].messages.splice(index,1);   
+        },
+
+        /**
+         * cancella l'oggetto dall'array
+         * al click sul botton "si"
+         */
+        deleteConfirmed(){
+            this.list[this.indexActive].messages.splice(this.indexDelete,1);
+            this.confirmDelete = false;
+        },
+
+        /**
+         * esce dall'alert di eliminazione messaggi
+         */
+        exitDelete(){
+            this.confirmDelete = false;
+        }
     },
 // end app / Vue
 })

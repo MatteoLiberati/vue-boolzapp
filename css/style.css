@@ -237,6 +237,22 @@ MAIN
     justify-content: flex-end;
 }
 
+.container-chat .message-sent > div{
+    text-align: right;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.container-chat .message-sent i{
+    cursor: pointer;
+    color: #bababa;
+    transition:color .3s;
+}
+
+.container-chat .message-sent i:hover{
+    color: #232946;
+}
+
 .message-sent,
 .message-received{
     padding: 15px 4px 5px 15px;
@@ -258,6 +274,7 @@ MAIN
 .message-received span:last-child{
     font-size: 10px;
     text-align: right;
+    margin-top: 10px;
     color: #bababa;
 }
 
@@ -315,7 +332,8 @@ MAIN
 }
 
 /* ALERT NOTIFY */
-.alert-notify{
+.alert-notify,
+.confirm-delete{
     position: absolute;
     top: 0;
     left: 0;
@@ -328,4 +346,26 @@ MAIN
 .alert-notify i{
     margin-top: 30px;
     font-size:100px;
+}
+
+/* CONFIRM DELETE */
+.confirm-delete > div{
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#fff;
+}
+
+.confirm-delete button{
+    margin: 0 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #bababa;
+    transition: background-color .3s;
+}
+
+.confirm-delete button:hover{
+    background-color: #4f6b79;
 }

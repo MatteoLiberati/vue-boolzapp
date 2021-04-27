@@ -118,12 +118,18 @@
                 <div class="container-chat">
                     <!-- chat assegnata dinamicamente con vue.js -->
                     <div
-                    v-for="messages in list[indexActive].messages"
+                    v-for="(messages,index) in list[indexActive].messages"
                     class="container-received flex"
                     :class="{'container-sent': messages.status == 'sent'}">
                         <div
                         class="flex-column message-sent"
                         :class="{'message-received': messages.status == 'received'}">
+                            <div>
+                                <i
+                                @click="deleteMessage(index)" 
+                                class="fas fa-trash-alt">
+                                </i>
+                            </div>
                             <span>{{messages.message}}</span>
                             <span class="date">{{messages.date}}</span>
                         </div>
@@ -159,6 +165,16 @@
             </section>
         </main>
 
+        <!-- CONFIRM DELETE -->
+        <div v-show="confirmDelete" class="confirm-delete flex-tot-center flex-column">
+            <div>
+                <h2>Sei sicuro di voler eliminare il messaggio?</h2>
+                <div class="flex-space-bet">
+                    <button @click="deleteConfirmed">Si, elimina</button>
+                    <button @click="exitDelete">No, esci</button>
+                </div>
+            </div>
+        </div>
         <!-- ALERT NOTIFY -->
         <div v-show="alert" class="alert-notify flex-tot-center flex-column">
             <h2>{{alertText}}</h2>
