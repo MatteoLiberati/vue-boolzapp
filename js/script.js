@@ -218,16 +218,18 @@ const app = new Vue({
          * invio di un input
          */
         input(){
-            this.list[this.indexActive].messages.push(
-                {
-                    date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
-                    message: this.newText,
-                    status: 'sent'
-                },
-            )
-            this.newText = "";
-            this.autoReply();
-            this.showEmoji = false;
+            if(this.newText != ""){
+                this.list[this.indexActive].messages.push(
+                    {
+                        date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                        message: this.newText,
+                        status: 'sent'
+                    },
+                )
+                this.newText = "";
+                this.autoReply();
+                this.showEmoji = false;
+            }
         },
 
         autoReply(){
