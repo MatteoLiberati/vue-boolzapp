@@ -92,7 +92,13 @@
         </aside>
 
         <!-- MAIN -->
-        <main class="content-right flex-column">
+        <main class="content-right flex-column relative">
+
+            <!-- STARTER -->
+            <div v-show="starter" class="starter flex-column flex-tot-center">
+                <i class="fab fa-whatsapp"></i>
+                <h2>Premi su un contatto per iniziare una conversazione</h2>
+            </div>
 
             <!-- MAIN-HEADER -->
             <section class="main-header flex-space-bet">
@@ -183,6 +189,7 @@
                 :class="notify ? 'fa-bell bellActive' : 'fa-bell-slash'">
             </i>
         </div>
+
     <!-- end app/ Vue -->
     </div>
 

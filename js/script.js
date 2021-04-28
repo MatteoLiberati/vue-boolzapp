@@ -188,6 +188,7 @@ const app = new Vue({
         alertText: "Notifiche attivate",
         confirmDelete: false,
         indexDelete : null,
+        starter : true,
     },
     mounted(){ 
         this.reset();
@@ -220,6 +221,7 @@ const app = new Vue({
             this.reset();
             this.list[index].active = true;
             this.indexActive = index;
+            this.starter = false;
         },
 
         /**

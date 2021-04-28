@@ -216,6 +216,22 @@ MAIN
     width: 65%;
 }
 
+/* STARTER */
+main .starter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #ededed;;
+}
+
+main .starter i{
+    font-size: calc(8vw + 8px);
+    color: #25D366;
+}
+
 /* MAIN HEADER */
 .main-header .interlocutor .name-date span:last-child{
     margin-top: 3px;
