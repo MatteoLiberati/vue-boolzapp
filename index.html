@@ -112,8 +112,22 @@
                         </span>
                     </div>
                 </div>
-                <div class="utilities">
-                    <a href="#"><i class="fas fa-search"></i></a>
+                <div class="utilities relative">
+                    <a class="search-conversation" href="#">
+                        <i 
+                            @click="searchVisible" 
+                            class="fas fa-search"
+                            :class="{active: searchInput}">
+                        </i>
+                        <div v-show="searchInput" class="search flex-column">
+                            <span>Cerca nei messaggi</span>
+                            <input 
+                            v-model.trim="searchMessage"
+                            @keyup="filterMessages"
+                            class="input" 
+                            type="text">
+                        </div>
+                    </a>
                     <a href="#"><i class="fas fa-paperclip"></i></a>
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                 </div>
@@ -128,6 +142,7 @@
                     class="container-received flex"
                     :class="{'container-sent': messages.status == 'sent'}">
                         <div
+                        v-show="list[indexActive].messages[index].visibleMessage"
                         class="flex-column message-sent"
                         :class="{'message-received': messages.status == 'received'}">
                             <div>

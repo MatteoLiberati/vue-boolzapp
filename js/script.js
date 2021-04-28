@@ -1,3 +1,4 @@
+// APP/ VUE JS
 const app = new Vue({
     el:"#app",
     data:{
@@ -189,11 +190,14 @@ const app = new Vue({
         confirmDelete: false,
         indexDelete : null,
         starter : true,
+        searchMessage : "",
+        searchInput: false,
     },
     mounted(){ 
         this.reset();
         this.lastAccess();
     },
+
     methods:{
 
         /**
@@ -222,6 +226,15 @@ const app = new Vue({
             this.list[index].active = true;
             this.indexActive = index;
             this.starter = false;
+            this.searchInput = false;
+            this.searchMessage = "";
+            // assegna visible message all'array di messages active
+            this.list[index].messages = this.list[index].messages.map(element=>{
+                return {
+                ...element,
+                visibleMessage: true,
+                }
+            })
         },
 
         /**
@@ -233,7 +246,8 @@ const app = new Vue({
                     {
                         date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
                         message: this.newText,
-                        status: 'sent'
+                        status: 'sent',
+                        visibleMessage: true,
                     },
                 )
                 this.newText = "";
@@ -245,23 +259,27 @@ const app = new Vue({
             }
         },
 
+        /**
+         * risposta automatica con timeout
+         */
         autoReply(){
             setTimeout(()=>{
                 this.list[this.indexActive].messages.push(
                 {
                     date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
                     message: this.randomResponses[this.randomNumber(0,this.randomResponses.length - 1)],
-                    status: 'received'
+                    status: 'received',
+                    visibleMessage: true,
                 },
             )
             },1000)
         },
 
-        arrayName(){
-            this.list.forEach(element =>{
-                element.name.toLowerCase().split("");
-            })
-        },
+        // arrayName(){
+        //     this.list.forEach(element =>{
+        //         element.name.toLowerCase().split("");
+        //     })
+        // },
 
         /**
          * filtra per caratteri gli utenti
@@ -339,7 +357,6 @@ const app = new Vue({
             this.indexDelete = index;
             console.log(this.indexDelete);
             this.confirmDelete = true;
-            // this.list[this.indexActive].messages.splice(index,1);   
         },
 
         /**
@@ -356,7 +373,29 @@ const app = new Vue({
          */
         exitDelete(){
             this.confirmDelete = false;
-        }
+        },
+
+        /**
+         * filtra nei messaggi il valore cercato nell'input main head
+         */
+        filterMessages(){
+            console.log(this.searchMessage);
+            this.list[this.indexActive].messages.forEach(element =>{
+                if(!element.message.toLowerCase().includes(this.searchMessage)){
+                    element.visibleMessage = false;
+                    }
+                else{
+                    element.visibleMessage = true;
+                    }
+            })
+        },
+
+        /**
+         * rende visibile l'input di ricerca messaggi al click dell'icona
+         */
+        searchVisible(){
+            this.searchInput =! this.searchInput;
+        },
     },
 // end app / Vue
 })

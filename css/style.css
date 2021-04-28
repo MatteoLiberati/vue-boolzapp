@@ -238,9 +238,35 @@ main .starter i{
     color: #777e82;
 }
 
-/* SECTION MAIN-HEADER */
 .content-right .main-header{
     background-color:#ededed
+}
+
+.main-header .utilities .search-conversation .search{
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    padding: 5px 15px;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+.main-header .utilities .search-conversation .search span{
+    margin-bottom: 5px;
+    cursor: default;
+    color: black;
+}
+
+.main-header .utilities .search-conversation .search input{
+    width: 300px; 
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -5px #777e82;
+}
+
+.main-header .search-conversation i:first-child.active{
+    color: #232946;
 }
 
 /* SECTION MAIN-CHAT */
