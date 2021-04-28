@@ -251,6 +251,7 @@ main .starter i{
 
 .container-sent{
     justify-content: flex-end;
+    word-wrap: break-word;
 }
 
 .container-chat .message-sent > div{
@@ -271,7 +272,7 @@ main .starter i{
 
 .message-sent,
 .message-received{
-    padding: 15px 4px 5px 15px;
+    padding: 8px 4px 5px 15px;
     min-width: 312px;
     min-height: 51px;
     border-radius: 10px;
