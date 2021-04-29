@@ -342,6 +342,10 @@ main .starter i{
     transition: color .3s;
 }
 
+.content-right .main-footer >div:first-child i.active{
+    color: #232946;
+}
+
 .content-right .main-footer div i:hover{
     color: #232946;
 }

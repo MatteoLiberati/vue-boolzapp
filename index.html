@@ -162,7 +162,7 @@
             <section class="main-footer flex">
                 <div class="flex-tot-center relative">
                     <a href="#" @click="statusEmoji">
-                        <i class="far fa-smile"></i>
+                        <i :class="{active:showEmoji}" class="far fa-smile"></i>
                     </a>
                     <!-- STAMPA EMOJI CON V-FOR -->
                     <div v-show="showEmoji" class="emoji flex">
@@ -196,6 +196,7 @@
                 </div>
             </div>
         </div>
+
         <!-- ALERT NOTIFY -->
         <div v-show="alert" class="alert-notify flex-tot-center flex-column">
             <h2>{{alertText}}</h2>
